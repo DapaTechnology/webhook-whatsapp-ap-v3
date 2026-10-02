@@ -35,3 +35,14 @@ app.post('/', (req, res) => {
 app.listen(port, () => {
   console.log(`\nListening on port ${port}\n`);
 });
+
+app.post('/', (req, res) => {
+
+    console.log("=================================");
+    console.log("🔥 WEBHOOK RECIBIDO");
+    console.log("=================================");
+
+    console.log(JSON.stringify(req.body, null, 2));
+
+    res.sendStatus(200);
+});
