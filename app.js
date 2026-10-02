@@ -28,14 +28,17 @@ app.post('/', (req, res) => {
   const timestamp = new Date().toISOString().replace('T', ' ').slice(0, 19);
   console.log(`\nWebhook received ${timestamp}\n`);
   console.log(JSON.stringify(req.body, null, 2));
-  res.status(200).end();
 
-   console.log("================================");
+  console.log("================================");
     console.log("WEBHOOK RECIBIDO DESDE META");
     console.log(JSON.stringify(req.body, null, 2));
     console.log("================================");
 
-    res.sendStatus(200);
+  
+  res.status(200).end();
+
+   
+   
 });
 
 // Start the server
